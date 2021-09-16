@@ -100,6 +100,10 @@ def paging_version = '3.0.0-beta03'
 def paging = "androidx.paging:paging-runtime-ktx:$paging_version"
 deps.paging = paging
 
+def timber_version = '4.7.1'
+def timber = "com.jakewharton.timber:timber:$timber_version"
+deps.timber = timber
+
 ext.deps = deps
 
 static def addRepos(RepositoryHandler handler) {
