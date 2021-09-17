@@ -7,4 +7,5 @@
     <string name="no_results">No results found</string>
     <string name="login">Login</string>
     <string name="submit">Submit</string>
+    <string name="enter_search_keyword">Please enter the search keyword</string>
 </resources>

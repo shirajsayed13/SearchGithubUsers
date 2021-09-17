@@ -6,8 +6,10 @@ import android.view.inputmethod.EditorInfo
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.shiraj.searchgithubusers.R
+import com.shiraj.searchgithubusers.Validator
 import com.shiraj.searchgithubusers.base.BaseFragment
 import com.shiraj.searchgithubusers.databinding.FragmentSearchBinding
+import com.shiraj.searchgithubusers.toast
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -21,12 +23,8 @@ internal class SearchFragment :
         binding.apply {
 
             btnSubmit.setOnClickListener {
-                val searchKeyword = binding.edtLogin.text.toString().trim()
-                findNavController().navigate(
-                    SearchFragmentDirections.actionSearchFragmentToSearchResultFragment(
-                        searchKeyword
-                    )
-                )
+                val searchKeyword = it.toString().trim() ?: ""
+                getSearchResult(searchKeyword)
             }
 
             edtLogin.setOnEditorActionListener(TextView.OnEditorActionListener { v, actionId, event ->
@@ -41,6 +39,18 @@ internal class SearchFragment :
                 }
                 false
             })
+        }
+    }
+
+    private fun getSearchResult(searchKeyword: String) {
+        if (Validator.validateInput(searchKeyword)) {
+            toast(R.string.enter_search_keyword)
+        } else {
+            findNavController().navigate(
+                SearchFragmentDirections.actionSearchFragmentToSearchResultFragment(
+                    searchKeyword
+                )
+            )
         }
     }
 }
