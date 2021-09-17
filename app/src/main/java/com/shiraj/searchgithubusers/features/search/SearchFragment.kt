@@ -23,7 +23,7 @@ internal class SearchFragment :
         binding.apply {
 
             btnSubmit.setOnClickListener {
-                val searchKeyword = it.toString().trim() ?: ""
+                val searchKeyword = binding.edtLogin.text.toString().trim()
                 getSearchResult(searchKeyword)
             }
 
@@ -44,13 +44,13 @@ internal class SearchFragment :
 
     private fun getSearchResult(searchKeyword: String) {
         if (Validator.validateInput(searchKeyword)) {
-            toast(R.string.enter_search_keyword)
-        } else {
             findNavController().navigate(
                 SearchFragmentDirections.actionSearchFragmentToSearchResultFragment(
                     searchKeyword
                 )
             )
+        } else {
+            toast(R.string.enter_search_keyword)
         }
     }
 }
