@@ -1,3 +1,5 @@
+# SearchGithubUsers
+
 This app has be build using:
 
 - 100% Kotlin
