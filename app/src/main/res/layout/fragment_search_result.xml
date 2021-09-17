@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/tile_user" />
+        tools:listitem="@layout/Item_github_user" />
 
     <TextView
         android:id="@+id/tv_no_search_result"

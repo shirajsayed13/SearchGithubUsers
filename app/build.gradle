@@ -8,7 +8,7 @@ plugins {
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.1"
+    buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.shiraj.searchgithubusers"
@@ -60,7 +60,6 @@ dependencies {
     implementation deps.androidx.core
     implementation deps.androidx.appcompat
     implementation deps.androidx.constraint_layout
-    implementation deps.androidx.swiperefresh
 
     // Material Design
     implementation deps.material
@@ -90,11 +89,6 @@ dependencies {
     // Coil
     implementation deps.coil
 
-    // Room
-    implementation deps.room.runtime
-    implementation deps.room.ktx
-    kapt deps.room.compiler
-
     // Lottie
     implementation deps.lottie
 
@@ -103,6 +97,8 @@ dependencies {
 
     // timber
     implementation deps.timber
+
+    implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
 
     // Tests
     testImplementation deps.junit.junit

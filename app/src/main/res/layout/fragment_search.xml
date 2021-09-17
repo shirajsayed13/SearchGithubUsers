@@ -7,7 +7,7 @@
     tools:context=".features.search.SearchFragment">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilSearchUser"
+        android:id="@+id/til_search_user"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="64dp"
@@ -16,12 +16,12 @@
         android:layout_marginBottom="24dp"
         android:hint="@string/login"
         android:imeOptions="actionSearch"
-        app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
+        app:layout_constraintBottom_toTopOf="@+id/btn_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edtLogin"
+            android:id="@+id/edt_login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:imeOptions="actionSearch"
@@ -31,7 +31,7 @@
 
 
     <Button
-        android:id="@+id/btnSubmit"
+        android:id="@+id/btn_submit"
         android:layout_width="164dp"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -44,8 +44,8 @@
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/tilSearchUser"
-        app:layout_constraintStart_toStartOf="@id/tilSearchUser"
+        app:layout_constraintEnd_toEndOf="@id/til_search_user"
+        app:layout_constraintStart_toStartOf="@id/til_search_user"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
 

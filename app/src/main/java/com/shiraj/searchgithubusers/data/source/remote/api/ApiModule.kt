@@ -19,7 +19,6 @@ object ApiModule {
     private external fun baseUrlFromJNI(): String
 
     @Provides
-    @Singleton
     internal fun provideBaseUrl(): String {
 
         object {

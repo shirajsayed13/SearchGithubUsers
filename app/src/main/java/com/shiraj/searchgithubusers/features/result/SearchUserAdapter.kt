@@ -6,13 +6,13 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.shiraj.searchgithubusers.databinding.TileUserBinding
+import com.shiraj.searchgithubusers.databinding.ItemGithubUserBinding
 import com.shiraj.searchgithubusers.domain.models.User
 
 class SearchUserAdapter : PagingDataAdapter<User, SearchUserAdapter.ViewHolder>(COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        TileUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        ItemGithubUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -20,7 +20,7 @@ class SearchUserAdapter : PagingDataAdapter<User, SearchUserAdapter.ViewHolder>(
     }
 
     class ViewHolder(
-        private val binding: TileUserBinding
+        private val binding: ItemGithubUserBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         fun bind(user: User) = with(binding) {
             tvUserName.text = user.login
