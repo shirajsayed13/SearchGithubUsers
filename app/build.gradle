@@ -98,37 +98,23 @@ dependencies {
     // timber
     implementation deps.timber
 
-    implementation 'com.facebook.shimmer:shimmer:0.4.0@aar'
-
     // Tests
     testImplementation deps.junit.junit
     testImplementation deps.mockk
     testImplementation deps.coroutines.test
     testImplementation deps.androidx.test
     testImplementation deps.turbine
-
-    //FIXME Refactor
-
-    // Hilt testing
-    androidTestImplementation "com.google.dagger:hilt-android-testing:2.32-alpha"
-    kaptAndroidTest "com.google.dagger:hilt-android-compiler:2.32-alpha"
-
-    implementation "androidx.fragment:fragment-ktx:1.3.0"
-    debugImplementation "androidx.fragment:fragment-testing:1.3.0"
-
     testImplementation "androidx.arch.core:core-testing:2.1.0"
-    testImplementation "androidx.room:room-testing:2.2.6"
-    testImplementation "junit:junit:4.13.2"
-    testImplementation "com.google.truth:truth:1.1.2"
-    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.4"
-    testImplementation 'org.robolectric:robolectric:4.5.1'
+    testImplementation deps.truth
+    implementation deps.fragment.ktx
 
-    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.2"
-    androidTestImplementation "androidx.test.espresso:espresso-core:3.3.0"
-    androidTestImplementation "androidx.navigation:navigation-testing:2.3.3"
-    androidTestImplementation "com.google.truth:truth:1.1.2"
-    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
-    androidTestImplementation "androidx.test:rules:1.3.0"
-    androidTestImplementation "androidx.test:runner:1.3.0"
-    androidTestImplementation "androidx.test:core-ktx:1.3.0"
+    debugImplementation deps.fragment.testing
+
+    androidTestImplementation deps.truth
+    androidTestImplementation deps.espresso
+    androidTestImplementation deps.junit.junit_ktx
+    androidTestImplementation deps.hilt.google_testing
+    androidTestImplementation deps.navigation.testing
+    androidTestImplementation deps.androidx.test_runner
+    androidTestImplementation deps.androidx.test_core_ktx
 }

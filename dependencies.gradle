@@ -14,11 +14,15 @@ def core_version = '1.3.2'
 def appcompat_version = '1.2.0'
 def constraint_layout_version = '2.0.4'
 def test_version = '2.1.0'
+def androidx_test_version = '1.4.0'
 def androidx = [:]
 androidx.core = "androidx.core:core-ktx:$core_version"
 androidx.appcompat = "androidx.appcompat:appcompat:$appcompat_version"
 androidx.constraint_layout = "androidx.constraintlayout:constraintlayout:$constraint_layout_version"
 androidx.test = "androidx.arch.core:core-testing:$test_version"
+androidx.test_rules = "androidx.test:rules:$androidx_test_version"
+androidx.test_runner = "androidx.test:runner:$androidx_test_version"
+androidx.test_core_ktx = "androidx.test:core-ktx:$androidx_test_version"
 deps.androidx = androidx
 
 def kotlin_version = '1.4.30'
@@ -28,8 +32,10 @@ kotlin.plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 deps.kotlin = kotlin
 
 def junit_version = '4.13.2'
+def junit_ktx_version = '1.1.3'
 def junit = [:]
 junit.junit = "junit:junit:$junit_version"
+junit.junit_ktx = "androidx.test.ext:junit-ktx:$junit_ktx_version"
 deps.junit = junit
 
 def material_version = '1.2.1'
@@ -40,6 +46,7 @@ def navigation_version = '2.3.2'
 def navigation = [:]
 navigation.fragment = "androidx.navigation:navigation-fragment-ktx:$navigation_version"
 navigation.ui = "androidx.navigation:navigation-ui-ktx:$navigation_version"
+navigation.testing = "androidx.navigation:navigation-testing:$navigation_version"
 navigation.safe_args = "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation_version"
 deps.navigation = navigation
 
@@ -62,11 +69,12 @@ retrofit.moshi = "com.squareup.retrofit2:converter-moshi:$retrofit_version"
 retrofit.moshi_ktx = "com.squareup.moshi:moshi-kotlin:$moshi_kotlin_version"
 deps.retrofit = retrofit
 
-def hilt_version = '2.31.2-alpha'
+def hilt_version = '2.32-alpha'
 def hilt = [:]
 hilt.plugin = "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
 hilt.android = "com.google.dagger:hilt-android:$hilt_version"
 hilt.google_compiler = "com.google.dagger:hilt-android-compiler:$hilt_version"
+hilt.google_testing = "com.google.dagger:hilt-android-testing:$hilt_version"
 hilt.viewmodel = "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
 hilt.androidx_compiler = "androidx.hilt:hilt-compiler:1.0.0-beta01"
 deps.hilt = hilt
@@ -94,6 +102,20 @@ deps.paging = paging
 def timber_version = '4.7.1'
 def timber = "com.jakewharton.timber:timber:$timber_version"
 deps.timber = timber
+
+def truth_version = '1.1.2'
+def truth = "com.google.truth:truth:$truth_version"
+deps.truth = truth
+
+def espresso_core = '3.4.0'
+def espresso = "androidx.test.espresso:espresso-core:$espresso_core"
+deps.espresso = espresso
+
+def androidx_fragment_version = '1.3.6'
+def fragment = [:]
+fragment.ktx = "androidx.fragment:fragment-ktx:$androidx_fragment_version"
+fragment.testing = "androidx.fragment:fragment-testing:$androidx_fragment_version"
+deps.fragment = fragment
 
 ext.deps = deps
 
