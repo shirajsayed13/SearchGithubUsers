@@ -9,7 +9,7 @@ interface GithubApi {
     @GET("search/users")
     suspend fun fetchGithubUsers(
         @Query("q", encoded = true) query: String,
-        @Query("per_page", encoded = true) size: Int = 9,
         @Query("page", encoded = true) page: Int = 1,
+        @Query("per_page", encoded = true) size: Int = 9,
     ): GithubUserResponse
 }
