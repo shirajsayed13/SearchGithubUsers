@@ -18,6 +18,7 @@ This app has be build using:
 - JUnit4
 
 
-##Screenshots
+##Demo
+https://user-images.githubusercontent.com/25314883/152742852-fe8a8864-a471-4978-8e15-0ffee47112ab.mp4
 
 ![1](/screenshots/HomeSearchScreen.jpeg)![2](/screenshots/SearchResultScreen.jpeg)
