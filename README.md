@@ -16,3 +16,8 @@ This app has be build using:
 - Espresso
 - Timber
 - JUnit4
+
+
+##Screenshots
+
+![1](/screenshots/HomeSearchScreen.jpeg)![2](/screenshots/SearchResultScreen.jpeg)
