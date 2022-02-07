@@ -20,4 +20,4 @@ This app has be build using:
 
 ##Screenshots
 
-![1](/screenshots/HomeSearchScreen.jpeg)![2](/screenshots/SearchResultScreen.jpeg)
+![1](/screenshots/SearchGithubUser.mp4)
